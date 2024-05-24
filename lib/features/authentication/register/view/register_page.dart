@@ -2,16 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg;
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:perairan_ngale/features/authentication/authentication.dart';
-import 'package:perairan_ngale/features/authentication/login/view/login_page.dart';
 import 'package:perairan_ngale/routes/router.dart';
 import 'package:perairan_ngale/shared/app_text_styles.dart';
 import 'package:perairan_ngale/shared/color_values.dart';
-import 'package:perairan_ngale/shared/styles.dart';
 import 'package:perairan_ngale/widgets/custom_button.dart';
 import 'package:perairan_ngale/widgets/custom_text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:perairan_ngale/models/auth.dart';
 
 @RoutePage()
 class RegisterPage extends StatefulWidget {

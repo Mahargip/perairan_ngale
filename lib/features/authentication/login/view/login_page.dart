@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg;
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:perairan_ngale/models/auth.dart';
 import 'package:perairan_ngale/routes/router.dart';
 import 'package:perairan_ngale/shared/app_text_styles.dart';
 import 'package:perairan_ngale/shared/color_values.dart';
@@ -76,7 +75,6 @@ class _LoginPageState extends State<LoginPage> {
       User? user = userCredential.user;
 
       if (user != null) {
-        // Check if the user is new
         DocumentSnapshot userDoc = await FirebaseFirestore.instance
             .collection('Customer')
             .doc(user.uid)
