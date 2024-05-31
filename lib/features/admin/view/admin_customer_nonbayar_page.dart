@@ -6,12 +6,7 @@ import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:perairan_ngale/features/admin/view/admin_customer_card.dart';
 import 'package:perairan_ngale/models/admin.dart';
 import 'package:perairan_ngale/models/customer.dart';
-import 'package:firebase_ui_firestore/firebase_ui_firestore.dart';
-import 'package:perairan_ngale/routes/router.dart';
-import 'package:perairan_ngale/shared/color_values.dart';
-import 'package:perairan_ngale/widgets/custom_button.dart';
 import 'package:perairan_ngale/widgets/custom_text_field.dart';
-import 'package:perairan_ngale/utils/extensions.dart';
 
 @RoutePage()
 class AdminCustomerNonBayarPage extends StatefulWidget {
@@ -47,7 +42,7 @@ class _AdminCustomerNonBayarPageState extends State<AdminCustomerNonBayarPage> {
   }
 
   Query<Map<String, dynamic>> _transactionQuery() {
-    int currentMonth = DateTime.now().month;
+    int currentMonth = Timestamp.now().toDate().month;
     return FirebaseFirestore.instance
         .collection('Transaksi')
         .where('status', isEqualTo: 'pembayaran')

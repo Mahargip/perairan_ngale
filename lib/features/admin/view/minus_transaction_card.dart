@@ -56,7 +56,7 @@ class MinusTransactionCard extends StatelessWidget {
       final customer = Customer.fromFirestore(snapshot);
       return {
         'name': customer.nama,
-        'alamatTower': customer.alamatTower ?? '',
+        'alamatTower': customer.alamatTower,
       };
     } else {
       return {

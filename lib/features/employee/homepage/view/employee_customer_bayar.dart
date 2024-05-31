@@ -43,7 +43,7 @@ class _EmployeeCustomerBayarPageState extends State<EmployeeCustomerBayarPage> {
   }
 
   Query<Map<String, dynamic>> _transactionQuery() {
-    int currentMonth = DateTime.now().month;
+    int currentMonth = Timestamp.now().toDate().month;
     return FirebaseFirestore.instance
         .collection('Transaksi')
         .where('status', isEqualTo: 'pembayaran')

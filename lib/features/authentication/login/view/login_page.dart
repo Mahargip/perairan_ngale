@@ -42,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
         password: _passwordController.text,
       );
 
+      // ignore: unnecessary_null_comparison
       if (userCredential != null) {
         User? user = userCredential.user;
         if (user != null) {
